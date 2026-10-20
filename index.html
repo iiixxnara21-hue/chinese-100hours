@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#713d3d">
+<title>رحلتي مع اللغة الصينية | تحدّي 100 ساعة</title>
+<style>
+:root{--ink:#422e2c;--wine:#713d3d;--rose:#b57d76;--sand:#f5eee8;--paper:#fffaf6;--line:#e8d9d0;--muted:#806d68;--green:#607c68}
+*{box-sizing:border-box}body{margin:0;background:#f8f3ee;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.7}
+button,input,textarea,select{font:inherit}button{cursor:pointer}
+.topbar{position:sticky;top:0;z-index:5;background:#fffaf2ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:12px 4%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-weight:800;color:var(--wine);font-size:1.05rem}.brand span{display:block;font-size:.72rem;font-weight:500;color:var(--muted)}
+nav{display:flex;gap:7px;flex-wrap:wrap}nav button,.smallbtn{border:1px solid transparent;background:transparent;border-radius:12px;padding:8px 12px;color:var(--ink)}nav button.active,nav button:hover{background:#f0e2dc;border-color:var(--line)}
+main{max-width:1240px;margin:24px auto;padding:0 18px}.hero{display:grid;grid-template-columns:1.7fr 1fr;gap:16px;margin-bottom:16px}
+.hero-main{min-height:250px;border-radius:24px;padding:32px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(100deg,rgba(62,37,33,.75),rgba(94,54,47,.26)),url('a_clean_warm_toned_aesthetic_study_dashboard_w.png') center 42%/cover;color:#fffaf5;overflow:hidden}
+.eyebrow{font-size:.8rem;letter-spacing:.04em;opacity:.9}.hero h1{font-size:clamp(1.8rem,4vw,3rem);line-height:1.25;margin:8px 0}.hero p{max-width:600px;margin:5px 0 18px}.cta{display:flex;gap:9px;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:11px 16px;background:var(--wine);color:white;font-weight:700}.btn.light{background:#fff7f0;color:var(--wine)}.btn.outline{background:transparent;border:1px solid var(--line);color:var(--wine)}.stats{display:grid;gap:12px}.stat{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:18px}.stat small{color:var(--muted)}.stat strong{display:block;font-size:1.8rem;color:var(--wine);line-height:1.4}.progress{height:10px;background:#eaded7;border-radius:99px;overflow:hidden;margin-top:8px}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--rose),var(--wine));width:0%;transition:width .3s}
+.tabs{display:flex;gap:8px;overflow:auto;padding:4px 0 16px}.tabs button{white-space:nowrap;border:1px solid var(--line);background:var(--paper);padding:10px 15px;border-radius:14px;color:var(--ink)}.tabs button.active{background:var(--wine);color:white;border-color:var(--wine)}
+.page{display:none}.page.active{display:block}.layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(260px,.8fr);gap:16px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:20px;margin-bottom:16px}.panel h2{margin:0 0 5px;font-size:1.25rem}.muted{color:var(--muted);font-size:.92rem}.stage{border:1px solid var(--line);border-radius:16px;padding:16px;margin-top:12px;background:#fffdfb}.stage-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.stage-num{background:var(--wine);color:white;border-radius:12px;min-width:36px;height:36px;display:grid;place-items:center;font-weight:800}.stage-title{display:flex;gap:10px;align-items:flex-start}.stage h3{margin:0;font-size:1rem}.pill{display:inline-block;border-radius:99px;padding:3px 9px;background:#f0e2dc;color:var(--wine);font-size:.75rem;white-space:nowrap}.stage ul{margin:10px 0;padding-right:20px}.stage-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.stage-foot label{display:flex;align-items:center;gap:7px}.check{accent-color:var(--wine);width:18px;height:18px}
+.day-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.session{border:1px solid var(--line);border-radius:15px;padding:14px;background:#fffdfb}.session b{display:block;color:var(--wine);margin-bottom:4px}.session input{width:100%;border:1px solid var(--line);border-radius:10px;padding:8px;background:white;color:var(--ink)}
+.field{display:grid;gap:5px;margin:10px 0}.field label{font-size:.88rem;color:var(--muted)}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px;background:white;color:var(--ink)}textarea{min-height:90px;resize:vertical}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.row>*{flex:1}
+.skill{margin:12px 0}.skilltop{display:flex;justify-content:space-between;gap:10px}.skill input{width:100%;accent-color:var(--wine)}
+.word-card{background:linear-gradient(135deg,#f2e3dc,#fff8f1);border-radius:17px;padding:20px;text-align:center}.hanzi{font-size:2.3rem;color:var(--wine);font-weight:800}.pinyin{color:var(--muted)}.word-actions{display:flex;justify-content:center;gap:8px;margin-top:12px}
+.resource{display:flex;justify-content:space-between;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding:12px 0}.resource:last-child{border:0}.resource a{color:var(--wine);font-weight:700;text-decoration:none}.resource a:hover{text-decoration:underline}
+.note{background:#f4e8e0;border-right:4px solid var(--rose);padding:12px 14px;border-radius:10px;margin:12px 0}.toast{position:fixed;bottom:18px;left:18px;background:var(--ink);color:white;padding:10px 14px;border-radius:12px;display:none;z-index:10}
+footer{text-align:center;color:var(--muted);font-size:.83rem;padding:24px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.layout{grid-template-columns:1fr}.hero-main{min-height:270px;padding:24px}.topbar{align-items:flex-start;flex-direction:column}.day-grid{grid-template-columns:1fr}.panel{padding:16px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">中文 · رحلتي مع الصينية <span>تحدّي شخصي من 100 ساعة</span></div>
+  <nav aria-label="التنقل">
+    <button class="active" data-page="home">الرئيسية</button>
+    <button data-page="plan">خطة 100 ساعة</button>
+    <button data-page="daily">جلساتي اليومية</button>
+    <button data-page="progress">متابعة التقدم</button>
+    <button data-page="notes">دفتر ملاحظاتي</button>
+  </nav>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-main">
+    <div class="eyebrow">رحلة صغيرة، إنجاز كبير</div>
+    <h1>رحلتي مع اللغة الصينية</h1>
+    <p>من الصفر إلى أساس قوي في الاستماع والكلام والقراءة والكتابة — خطوة خطوة، وبطريقتك.</p>
+    <div class="cta"><button class="btn light" onclick="showPage('daily')">ابدئي جلسة اليوم ←</button><button class="btn outline" style="color:white;border-color:#ffffff88" onclick="showPage('plan')">شوفي الخطة</button></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><small>إنجازك حتى الآن</small><strong><span id="hoursDone">0</span> / 100 ساعة</strong><div class="progress"><span id="mainBar"></span></div><small id="percentText">0% من التحدي</small></div>
+    <div class="stat"><small>إيقاعك الحالي</small><strong>ساعتان يوميًا</strong><small>مقسّمتان إلى جلسات قصيرة مع استراحة بينهما</small></div>
+    <div class="stat"><small>قاعدة الرحلة</small><strong style="font-size:1.15rem">افهمي، استخدمي، اختبري نفسك</strong><small>لا تنتقلي لمجرد أنك شاهدتِ الدرس؛ انتقلي عندما تقدرين تطبقينه.</small></div>
+  </div>
+</section>
+<div class="tabs" aria-label="الأقسام">
+  <button class="active" data-page="home">نظرة عامة</button><button data-page="plan">مراحل التحدي</button><button data-page="daily">روتين اليوم</button><button data-page="progress">المهارات</button><button data-page="notes">الملاحظات والاختبارات</button>
+</div>
+<section class="page active" id="home">
+<div class="layout">
+<div>
+  <div class="panel"><h2>خريطة الـ100 ساعة</h2><p class="muted">الخطة مقسمة إلى خمس مراحل. المدى بالساعات تراكمي، وليس عدد ساعات المرحلة.</p><div id="homeStages"></div></div>
+  <div class="panel"><h2>طريقة الدراسة في كل درس</h2><div class="stage"><h3>1. افهمي الفكرة</h3><p>شاهدي شرحًا قصيرًا، وركّزي على نقطة واحدة فقط مثل نغمة أو تركيب.</p></div><div class="stage"><h3>2. اسمعي وقلّدي</h3><p>اسمعي الجملة، كرريها بصوت مسموع، ثم سجلي صوتك وقارنيه بالنموذج.</p></div><div class="stage"><h3>3. استرجعي من الذاكرة</h3><p>أغلقي المصدر وحاولي قول الجملة أو كتابتها من غير مساعدة.</p></div><div class="stage"><h3>4. استخدميها</h3><p>كوّني جملة جديدة أو جاوبي عن سؤال حقيقي باستخدام ما تعلمتِه.</p></div><div class="stage"><h3>5. اختبري نفسك وراجعي</h3><p>سجلي الأخطاء، وراجعيها في اليوم التالي وبعد عدة أيام.</p></div><div class="note">هذه خطة دراسية عملية مصممة لك بروح التعلّم المكثّف. إذا أرسلتِ رابط فيديو عبد الرحمن نفسه، أضبط المراحل على طريقته بالتحديد بدل افتراض تفاصيل الفيديو.</div></div>
+</div>
+<aside>
+  <div class="panel"><h2>جدول مقترح لساعتين</h2><p class="muted">غيّري الأوقات حسب دوامك وواجباتك.</p><div class="session"><b>الجلسة الأولى · 60 دقيقة</b>10 د مراجعة<br>20 د درس جديد<br>15 د استماع وتقليد<br>15 د استرجاع من الذاكرة</div><div class="session" style="margin-top:10px"><b>استراحة · 30 دقيقة</b>ابتعدي عن الشاشة وخذي راحتك.</div><div class="session" style="margin-top:10px"><b>الجلسة الثانية · 60 دقيقة</b>15 د حروف وكلمات<br>20 د محادثة وتطبيق<br>15 د قراءة أو كتابة<br>10 د اختبار وتسجيل الأخطاء</div></div>
+  <div class="panel"><h2>كلمة اليوم</h2><div class="word-card"><div class="hanzi" id="hanzi">你好</div><div class="pinyin" id="pinyin">nǐ hǎo</div><div id="meaning">مرحبًا</div><div class="word-actions"><button class="btn" onclick="nextWord()">كلمة أخرى</button><button class="btn outline" onclick="copyWord()">نسخ الكلمة</button></div></div></div>
+  <div class="panel"><h2>قواعدي الصغيرة</h2><ul><li>أتعلم بتركيز ومن دون مشتتات.</li><li>أطبق ما أتعلمه في نفس اليوم.</li><li>لا أكتفي بالحفظ؛ أستخدم اللغة.</li><li>أراجع أخطائي باستمرار.</li><li>الاستمرار أهم من الكمال.</li></ul></div>
+</aside>
+</div>
+</section>
+<section class="page" id="plan">
+<div class="panel"><h2>خطة التحدّي كاملة</h2><p class="muted">حددي المرحلة التي أنهيتِها بنفسك. سيُحفظ التقدم على هذا الجهاز.</p><div id="allStages"></div></div>
+<div class="panel"><h2>ما معنى «أتقنت المرحلة»؟</h2><p>قبل وضع علامة الإنجاز، تأكدي أنك تقدرين على تنفيذ المهارة من غير قراءة الحل. مشاهدة الفيديو وحدها لا تُحسب إتقانًا.</p><ul><li>أشرح الفكرة بكلامي.</li><li>أتعرف على أمثلة جديدة.</li><li>أستخدم ما تعلمته في جملة أو موقف.</li><li>أعيد الاختبار بعد يوم لأتأكد أني لم أنسَ.</li></ul></div>
+</section>
+<section class="page" id="daily">
+<div class="layout">
+<div class="panel"><h2>سجل جلسة اليوم</h2><p class="muted">سجلي الوقت الفعلي الذي درستِه، وليس الوقت المخطط فقط.</p>
+<div class="field"><label for="date">التاريخ</label><input type="date" id="date"></div>
+<div class="field"><label for="minutes">كم دقيقة درستِ اليوم؟</label><input id="minutes" type="number" min="0" max="300" value="120"></div>
+<div class="field"><label for="topic">موضوع اليوم</label><input id="topic" placeholder="مثال: النغمات الأربع أو التعريف بالنفس"></div>
+<div class="field"><label for="learned">ماذا تعلمتِ؟ اكتبي من ذاكرتك</label><textarea id="learned" placeholder="اكتبي جملة أو قاعدة أو كلمات تذكرينها من دون الرجوع للدرس..."></textarea></div>
+<div class="field"><label for="mistakes">أخطائي التي سأراجعها</label><textarea id="mistakes" placeholder="مثال: أخلط بين النغمة الثانية والثالثة..."></textarea></div>
+<button class="btn" onclick="saveSession()">حفظ الجلسة وإضافة الوقت</button>
+</div>
+<div class="panel"><h2>سجل الأيام السابقة</h2><div id="sessionList" class="muted">لا توجد جلسات محفوظة بعد.</div><button class="btn outline" onclick="exportData()" style="margin-top:12px">تصدير نسخة احتياطية</button></div>
+</div>
+</section>
+<section class="page" id="progress">
+<div class="layout"><div class="panel"><h2>تقدمك في المهارات</h2><p class="muted">حددي مستوى تقدّمك من 0 إلى 100. هذا تقييم ذاتي وليس اختبارًا رسميًا.</p><div id="skills"></div><button class="btn" onclick="saveSkills()">حفظ التقدم</button></div><div class="panel"><h2>اختبار نهاية كل أسبوع</h2><p>اختبري نفسك من دون ملاحظات:</p><ul><li>هل أميز النغمات التي درستها؟</li><li>هل أفهم الكلمات عندما أسمعها؟</li><li>هل أستطيع قول جمل دون قراءة؟</li><li>هل أتعرف على الحروف التي تعلمتها؟</li><li>ما أكثر ثلاثة أخطاء تكررت؟</li></ul><div class="field"><label>نتيجة اختبارك الأسبوعي / 10</label><input id="weeklyScore" type="number" min="0" max="10" placeholder="مثال: 7"></div><div class="field"><label>هدف الأسبوع القادم</label><textarea id="weeklyGoal" placeholder="هدف واحد واضح وقابل للقياس"></textarea></div><button class="btn" onclick="saveWeekly()">حفظ نتيجة الأسبوع</button><div id="weeklyHistory" class="muted" style="margin-top:12px"></div></div></div>
+</section>
+<section class="page" id="notes">
+<div class="layout"><div class="panel"><h2>دفتر الملاحظات</h2><div class="field"><label>عنوان الملاحظة</label><input id="noteTitle" placeholder="مثال: الفرق بين نغمتين"></div><div class="field"><label>ملاحظاتك</label><textarea id="noteBody" placeholder="اكتبي شرحك بكلامك، أمثلة، أو أسئلة تريدين حلها..."></textarea></div><button class="btn" onclick="saveNote()">إضافة الملاحظة</button><div id="notesList"></div></div><div class="panel"><h2>مصادر بداية مقترحة</h2><div class="resource"><div><b>Chinese Zero to Hero</b><div class="muted">دروس منظمة للمبتدئين</div></div><a href="https://www.youtube.com/results?search_query=Chinese+Zero+to+Hero+beginner" target="_blank" rel="noopener">فتح ↗</a></div><div class="resource"><div><b>Yoyo Chinese</b><div class="muted">النطق وPinyin والتراكيب</div></div><a href="https://www.youtube.com/results?search_query=Yoyo+Chinese+Pinyin+beginner" target="_blank" rel="noopener">فتح ↗</a></div><div class="resource"><div><b>Chinese pronunciation practice</b><div class="muted">تدريب الاستماع وتقليد النطق</div></div><a href="https://www.youtube.com/results?search_query=Mandarin+Chinese+four+tones+practice" target="_blank" rel="noopener">فتح ↗</a></div><div class="note">اختاري مصدرًا أساسيًا واحدًا في البداية، ولا تضيعي وقتك بين مصادر كثيرة. نضيف المصادر المناسبة لكل مرحلة لاحقًا.</div><button class="btn outline" onclick="resetAll()">مسح بيانات الموقع من هذا الجهاز</button></div></div>
+</section>
+</main>
+<footer>صُمّم لرحلتك أنتِ · التقدم والملاحظات تُحفظ في متصفح هذا الجهاز فقط.</footer>
+<div class="toast" id="toast"></div>
+<script>
+const stages=[
+{n:1,title:"الأساسيات والنطق",range:"0–15 ساعة",goal:"تأسيس الأذن واللسان",items:["التعرف إلى أصوات الماندرين ونظام Pinyin","تدريب النغمات الأربع مع أزواج صوتية","التحية والتعابير القصيرة الأولى","استماع وتقليد وتسجيل الصوت"]},
+{n:2,title:"بناء المفردات والتراكيب",range:"15–35 ساعة",goal:"تكوين جمل بسيطة",items:["التعريف بالنفس والسؤال والإجابة","الأرقام والوقت والعائلة والأشياء اليومية","تركيب جمل قصيرة بدل حفظ قوائم فقط","بدء الحروف الصينية الشائعة بالتدريج"]},
+{n:3,title:"المحادثة والاستماع",range:"35–65 ساعة",goal:"فهم مواقف يومية",items:["فهم محادثات قصيرة مناسبة للمبتدئين","التحدث عن يومك ودراستك واحتياجاتك","تقنية الاستماع ثم التقليد ثم إعادة الكلام","قراءة نصوص قصيرة مع Pinyin عند الحاجة"]},
+{n:4,title:"التوسع في القراءة والكتابة",range:"65–85 ساعة",goal:"زيادة الاستقلالية",items:["توسيع المفردات والتراكيب","قراءة حوارات ونصوص قصيرة","كتابة جمل من الذاكرة وتعلم ترتيب الخطوط","محادثات أطول مع تسجيل الأخطاء"]},
+{n:5,title:"التطبيق والاختبار",range:"85–100 ساعة",goal:"قياس ما تستطيعين فعله",items:["محادثة تعريف بالنفس دون نص","اختبار استماع ومفردات وتراكيب","قراءة وكتابة وفق ما تعلمتِه","تحديد الثغرات ووضع خطة ما بعد 100 ساعة"]}
+];
+const words=[["你好","nǐ hǎo","مرحبًا"],["谢谢","xièxie","شكرًا"],["再见","zàijiàn","إلى اللقاء"],["我","wǒ","أنا"],["你","nǐ","أنتِ / أنتَ"],["学习","xuéxí","يتعلم / دراسة"],["加油","jiā yóu","بالتوفيق / شدّي حيلك"]];
+let wordIndex=0;
+const get=(k,d)=>{try{return JSON.parse(localStorage.getItem("cn100_"+k))??d}catch(e){return d}};
+const put=(k,v)=>localStorage.setItem("cn100_"+k,JSON.stringify(v));
+function toast(s){let t=document.getElementById("toast");t.textContent=s;t.style.display="block";setTimeout(()=>t.style.display="none",2200)}
+function showPage(id){document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id===id));document.querySelectorAll("[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===id));window.scrollTo({top:0,behavior:"smooth"})}
+document.querySelectorAll("[data-page]").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
+function renderStages(target){let done=get("stages",[]);document.getElementById(target).innerHTML=stages.map(s=>`<div class="stage"><div class="stage-head"><div class="stage-title"><div class="stage-num">${s.n}</div><div><h3>${s.title}</h3><span class="muted">${s.range} · ${s.goal}</span></div></div><span class="pill">${done.includes(s.n)?"مكتملة":"مرحلة "+s.n}</span></div><ul>${s.items.map(i=>`<li>${i}</li>`).join("")}</ul><div class="stage-foot"><label><input class="check" type="checkbox" ${done.includes(s.n)?"checked":""} onchange="toggleStage(${s.n},this.checked)"> أنهيت هذه المرحلة</label><span class="muted">لا تعلّميها إلا بعد التطبيق</span></div></div>`).join("")}
+function toggleStage(n,on){let a=get("stages",[]);a=on?[...new Set([...a,n])]:a.filter(x=>x!==n);put("stages",a);renderStages("allStages");renderStages("homeStages");updateProgress();toast(on?"تم تحديث المرحلة":"تم إلغاء علامة الإنجاز")}
+function updateProgress(){let sessions=get("sessions",[]),mins=sessions.reduce((a,s)=>a+(Number(s.minutes)||0),0),stageDone=get("stages",[]).length;let hours=Math.min(100,mins/60);document.getElementById("hoursDone").textContent=hours.toLocaleString("ar",{maximumFractionDigits:1});let pct=Math.min(100,hours);document.getElementById("mainBar").style.width=pct+"%";document.getElementById("percentText").textContent=Math.round(pct)+"% من التحدي · "+stageDone+"/5 مراحل"}
+function saveSession(){let date=document.getElementById("date").value||new Date().toISOString().slice(0,10),minutes=Number(document.getElementById("minutes").value),topic=document.getElementById("topic").value.trim(),learned=document.getElementById("learned").value.trim(),mistakes=document.getElementById("mistakes").value.trim();if(!minutes||minutes<1){toast("أدخلي عدد الدقائق أولًا");return}let arr=get("sessions",[]);arr.unshift({date,minutes,topic,learned,mistakes});put("sessions",arr);renderSessions();updateProgress();toast("انحفظت جلستك، أحسنتِ!")}
+function renderSessions(){let a=get("sessions",[]),el=document.getElementById("sessionList");el.innerHTML=a.length?a.map(s=>`<div class="stage"><b>${escapeHtml(s.date)} · ${s.minutes} دقيقة</b><div>${escapeHtml(s.topic||"جلسة صينية")}</div>${s.learned?`<p>${escapeHtml(s.learned)}</p>`:""}${s.mistakes?`<small class="muted">للمراجعة: ${escapeHtml(s.mistakes)}</small>`:""}</div>`).join(""):"لا توجد جلسات محفوظة بعد."}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function nextWord(){wordIndex=(wordIndex+1)%words.length;let w=words[wordIndex];document.getElementById("hanzi").textContent=w[0];document.getElementById("pinyin").textContent=w[1];document.getElementById("meaning").textContent=w[2]}
+function copyWord(){let w=words[wordIndex];if(navigator.clipboard){navigator.clipboard.writeText(w.join(" — ")).then(()=>toast("تم نسخ الكلمة")).catch(()=>toast(w.join(" — ")))}else toast(w.join(" — "))}
+const skillNames=["الاستماع","التحدث","القراءة","الكتابة","النطق والنغمات"];
+function renderSkills(){let s=get("skills",[0,0,0,0,0]);document.getElementById("skills").innerHTML=skillNames.map((n,i)=>`<div class="skill"><div class="skilltop"><label>${n}</label><b id="skillval${i}">${s[i]}%</b></div><input aria-label="${n}" type="range" min="0" max="100" step="5" value="${s[i]}" oninput="document.getElementById('skillval${i}').textContent=this.value+'%'" id="skill${i}"></div>`).join("")}
+function saveSkills(){put("skills",skillNames.map((_,i)=>Number(document.getElementById("skill"+i).value)));toast("تم حفظ تقدم المهارات")}
+function saveWeekly(){let score=document.getElementById("weeklyScore").value,goal=document.getElementById("weeklyGoal").value.trim();if(score===""&&!goal){toast("أضيفي النتيجة أو هدف الأسبوع");return}let a=get("weekly",[]);a.unshift({date:new Date().toISOString().slice(0,10),score,goal});put("weekly",a);renderWeekly();toast("تم حفظ مراجعة الأسبوع")}
+function renderWeekly(){let a=get("weekly",[]);document.getElementById("weeklyHistory").innerHTML=a.map(w=>`<div class="stage"><b>${escapeHtml(w.date)} · النتيجة: ${escapeHtml(w.score||"—")}/10</b><div>${escapeHtml(w.goal||"لا يوجد هدف مكتوب")}</div></div>`).join("")||"لم تحفظي اختبارًا أسبوعيًا بعد."}
+function saveNote(){let title=document.getElementById("noteTitle").value.trim(),body=document.getElementById("noteBody").value.trim();if(!title&&!body){toast("اكتبي ملاحظة أولًا");return}let a=get("notes",[]);a.unshift({title:title||"ملاحظة",body,date:new Date().toISOString().slice(0,10)});put("notes",a);document.getElementById("noteTitle").value="";document.getElementById("noteBody").value="";renderNotes();toast("تمت إضافة الملاحظة")}
+function renderNotes(){let a=get("notes",[]);document.getElementById("notesList").innerHTML=a.map(n=>`<div class="stage"><b>${escapeHtml(n.title)}</b><small class="muted"> · ${escapeHtml(n.date)}</small><p>${escapeHtml(n.body)}</p><button class="smallbtn" onclick="deleteNote('${n.date}', '${escapeHtml(n.title).replace(/'/g,"&#39;")}')">حذف</button></div>`).join("")}
+function deleteNote(date,title){let a=get("notes",[]),i=a.findIndex(n=>n.date===date&&n.title===title);if(i>=0)a.splice(i,1);put("notes",a);renderNotes()}
+function exportData(){let data={sessions:get("sessions",[]),stages:get("stages",[]),skills:get("skills",[]),weekly:get("weekly",[]),notes:get("notes",[])};let blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="chinese-100-hours-backup.json";a.click();URL.revokeObjectURL(url)}
+function resetAll(){if(confirm("هل أنتِ متأكدة؟ سيمسح هذا كل تقدمك وملاحظاتك من هذا المتصفح.")){Object.keys(localStorage).filter(k=>k.startsWith("cn100_")).forEach(k=>localStorage.removeItem(k));renderAll();toast("تم مسح بيانات الموقع")}}
+function renderAll(){renderStages("homeStages");renderStages("allStages");renderSessions();renderSkills();renderWeekly();renderNotes();updateProgress()}
+document.getElementById("date").value=new Date().toISOString().slice(0,10);
+renderAll();
+</script>
+</body>
+</html>
